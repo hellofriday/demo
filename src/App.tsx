@@ -192,7 +192,7 @@ export const App = () => {
 
   return (
     <div className="App">
-       <button
+{/*        <button
         style={{ padding: 10, margin: 10, backgroundColor: 'red' }}
         onClick={()=>{
           window.open('okx://wallet/dapp/details?dappUrl=https://app.crossspace.io/async/async-sign?sid=52390eb9-858b-44c0-b199-f9e0e92268db')
@@ -200,7 +200,7 @@ export const App = () => {
         }
       >
         Open Okx
-      </button>
+      </button> */}
       <div className="sdkConfig">
         {connecting && (
           <div>Waiting for Metamask to link the connection...</div>
