@@ -4,10 +4,13 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { MetaMaskProvider } from '@metamask/sdk-react';
+import {BrowserRouter, createBrowserRouter, Route, RouterProvider, Routes} from "react-router-dom";
+import {Demo} from "./Demo";
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
+
 
 root.render(
   <React.StrictMode>
@@ -22,7 +25,12 @@ root.render(
           url: window.location.host,
         }
     }}>
-      <App />
+        <BrowserRouter basename={'/'} >
+            <Routes>
+                <Route path="/" element={<App/>} /> {/* 👈 Renders at /app/ */}
+                <Route path="/demo" element={<Demo/>} />
+            </Routes>
+        </BrowserRouter>
     </MetaMaskProvider>
   </React.StrictMode>
 );
